@@ -58,11 +58,13 @@ class _DashPageState extends State<DashPage> {
         body: Stack(
           alignment: AlignmentDirectional.topStart,
           children: <Widget>[
-            Align(
-              alignment: Alignment.topCenter,
-              child: Image.asset(
-                'images/dash.png',
-                fit: BoxFit.cover,
+            Container(
+              height: 120.0,
+              decoration: new BoxDecoration(
+                color: cardColor,
+                borderRadius: new BorderRadius.vertical(
+                  bottom: new Radius.circular(30),
+                ),
               ),
             ),
             Align(
@@ -154,7 +156,9 @@ class _DashPageState extends State<DashPage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, 'insights');
+                      },
                       child: Container(
                         height: 140,
                         width: 140,
