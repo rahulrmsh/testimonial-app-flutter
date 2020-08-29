@@ -159,7 +159,7 @@ class _DBProfileState extends State<DBProfile> {
                         borderColorEnd: cardColor,
                         animatedWidgetFollowingHeader: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
-                          child: const Icon(
+                          child: Icon(
                             Icons.expand_more,
                             color: Colors.white,
                           ),
@@ -238,7 +238,7 @@ class _DBProfileState extends State<DBProfile> {
                         borderColorEnd: cardColor,
                         animatedWidgetFollowingHeader: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
-                          child: const Icon(
+                          child: Icon(
                             Icons.expand_more,
                             color: Colors.white,
                           ),
@@ -317,7 +317,7 @@ class _DBProfileState extends State<DBProfile> {
                         borderColorEnd: cardColor,
                         animatedWidgetFollowingHeader: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
-                          child: const Icon(
+                          child: Icon(
                             Icons.expand_more,
                             color: Colors.white,
                           ),

@@ -116,7 +116,7 @@ class _LogUserState extends State<LogUser> {
               Center(
                 child: CupertinoButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'dbProfile');
+                      Navigator.pushNamed(context, 'dash');
                     },
                     color: Color(0xFF0D5EA3),
                     child: Text("GET OTP")),
