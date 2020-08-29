@@ -124,7 +124,7 @@ class _LogUserState extends State<LogUser> {
               Expanded(
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
-                  child: Image.asset('images/login.jpg'),
+                  child: Image(image: AssetImage('images/login.jpg')),
                 ),
               )
             ],

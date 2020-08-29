@@ -1,6 +1,7 @@
 import 'package:configurable_expansion_tile/configurable_expansion_tile.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:testimonial_app/utilities/constants.dart';
 
 class DBProfile extends StatefulWidget {
@@ -15,7 +16,7 @@ class _DBProfileState extends State<DBProfile> {
   @override
   void initState() {
     super.initState();
-    currentIndex = 0;
+    currentIndex = 3;
   }
 
   void changePage(int index) {
@@ -44,12 +45,12 @@ class _DBProfileState extends State<DBProfile> {
                 ),
                 color: Colors.white,
                 elevation: 6.0,
-                margin: EdgeInsets.only(top: 190),
+                margin: EdgeInsets.only(top: 110),
                 child: Wrap(
                   children: <Widget>[
                     Center(
                       child: Container(
-                        margin: EdgeInsets.only(top: 70.0),
+                        margin: EdgeInsets.only(top: 40.0),
                         child: Text(
                           'Rahul Ramesh',
                           style: TextStyle(
@@ -83,63 +84,69 @@ class _DBProfileState extends State<DBProfile> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: ShapeDecoration(
-                                    shape: CircleBorder(), color: cardColor),
-                                child: Padding(
-                                  padding: EdgeInsets.all(3),
-                                  child: DecoratedBox(
-                                    decoration: ShapeDecoration(
-                                      shape: CircleBorder(),
-                                    ),
-                                    child: Icon(
-                                      Icons.phone,
-                                      color: Colors.white,
-                                      size: 35,
+                          GestureDetector(
+                            onTap: null,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: ShapeDecoration(
+                                      shape: CircleBorder(), color: cardColor),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(3),
+                                    child: DecoratedBox(
+                                      decoration: ShapeDecoration(
+                                        shape: CircleBorder(),
+                                      ),
+                                      child: Icon(
+                                        Icons.phone,
+                                        color: Colors.white,
+                                        size: 35,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                'Call',
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
+                                Text(
+                                  'Call',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
                           ),
-                          Column(
-                            children: [
-                              Container(
-                                width: 60,
-                                height: 60,
-                                decoration: ShapeDecoration(
-                                    shape: CircleBorder(), color: cardColor),
-                                child: Padding(
-                                  padding: EdgeInsets.all(3),
-                                  child: DecoratedBox(
-                                    decoration: ShapeDecoration(
-                                      shape: CircleBorder(),
-                                    ),
-                                    child: Icon(
-                                      Icons.map,
-                                      color: Colors.white,
-                                      size: 35,
+                          GestureDetector(
+                            onTap: null,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: ShapeDecoration(
+                                      shape: CircleBorder(), color: cardColor),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(3),
+                                    child: DecoratedBox(
+                                      decoration: ShapeDecoration(
+                                        shape: CircleBorder(),
+                                      ),
+                                      child: Icon(
+                                        Icons.map,
+                                        color: Colors.white,
+                                        size: 35,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                'Navigate',
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
+                                Text(
+                                  'Navigate',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -150,142 +157,239 @@ class _DBProfileState extends State<DBProfile> {
                       child: ConfigurableExpansionTile(
                         borderColorStart: cardColor,
                         borderColorEnd: cardColor,
-                        animatedWidgetFollowingHeader: const Icon(
-                          Icons.expand_more,
-                          color: const Color(0xFF707070),
+                        animatedWidgetFollowingHeader: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
+                          child: const Icon(
+                            Icons.expand_more,
+                            color: Colors.white,
+                          ),
                         ),
                         headerExpanded: Flexible(
-                            child: Center(child: Text("A Header Changed"))),
-                        header: Container(
-                            color: Colors.transparent,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Icon(
-                                    Icons.map,
-                                    color: Colors.white,
-                                    size: 35,
-                                  ),
-                                  Text(
-                                    'Navigate',
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                ],
-                              ),
-                            )),
-                        headerBackgroundColorStart: Colors.grey,
-                        expandedBackgroundColor: Colors.amber,
-                        headerBackgroundColorEnd: Colors.teal,
-                        children: [
-                          Row(
-                            children: <Widget>[Text("CHILD 1")],
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  Icons.map,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'About',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
                           ),
-                          Row(
-                            children: <Widget>[Text("CHILD 2")],
-                          )
+                        ),
+                        header: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  Icons.map,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'About',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        headerBackgroundColorStart: cardColor,
+                        expandedBackgroundColor: cardColor,
+                        headerBackgroundColorEnd: cardColor,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'About',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 10.0, bottom: 15.0),
-                      child: Center(
-                        child: Text(
-                          "FORGOT PASSWORD",
-                          style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              color: Colors.black,
-                              fontSize: 16.0),
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 40.0, top: 10.0),
-                        child: Text.rich(
-                          TextSpan(
-                            children: const <TextSpan>[
-                              TextSpan(
-                                  text: ' USER ? ',
-                                  style: TextStyle(
-                                      fontSize: 16.0, color: Colors.black)),
-                              TextSpan(
-                                  text: 'REGISTER',
-                                  style: TextStyle(
-                                      fontSize: 16.0,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.black)),
-                            ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 50, vertical: 15),
+                      child: ConfigurableExpansionTile(
+                        borderColorStart: cardColor,
+                        borderColorEnd: cardColor,
+                        animatedWidgetFollowingHeader: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
+                          child: const Icon(
+                            Icons.expand_more,
+                            color: Colors.white,
                           ),
                         ),
-                      ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 40.0, top: 10.0),
-                        child: Text.rich(
-                          TextSpan(
-                            children: const <TextSpan>[
-                              TextSpan(
-                                  text: ' USER ? ',
+                        headerExpanded: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.clock,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'Office Hours',
                                   style: TextStyle(
-                                      fontSize: 16.0, color: Colors.black)),
-                              TextSpan(
-                                  text: 'REGISTER',
-                                  style: TextStyle(
-                                      fontSize: 16.0,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.black)),
-                            ],
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 40.0, top: 10.0),
-                        child: Text.rich(
-                          TextSpan(
-                            children: const <TextSpan>[
-                              TextSpan(
-                                  text: ' USER ? ',
+                        header: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.clock,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'Office Hours',
                                   style: TextStyle(
-                                      fontSize: 16.0, color: Colors.black)),
-                              TextSpan(
-                                  text: 'REGISTER',
-                                  style: TextStyle(
-                                      fontSize: 16.0,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.black)),
-                            ],
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+                        headerBackgroundColorStart: cardColor,
+                        expandedBackgroundColor: cardColor,
+                        headerBackgroundColorEnd: cardColor,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'Office Hours',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Center(
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 40.0, top: 10.0),
-                        child: Text.rich(
-                          TextSpan(
-                            children: const <TextSpan>[
-                              TextSpan(
-                                  text: ' USER ? ',
-                                  style: TextStyle(
-                                      fontSize: 16.0, color: Colors.black)),
-                              TextSpan(
-                                  text: 'REGISTER',
-                                  style: TextStyle(
-                                      fontSize: 16.0,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.black)),
-                            ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 50, vertical: 15),
+                      child: ConfigurableExpansionTile(
+                        borderColorStart: cardColor,
+                        borderColorEnd: cardColor,
+                        animatedWidgetFollowingHeader: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
+                          child: const Icon(
+                            Icons.expand_more,
+                            color: Colors.white,
                           ),
                         ),
+                        headerExpanded: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.award,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'Acheivements',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        header: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.award,
+                                  color: Colors.white,
+                                  size: 35,
+                                ),
+                                Text(
+                                  'Acheivements',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        headerBackgroundColorStart: cardColor,
+                        expandedBackgroundColor: cardColor,
+                        headerBackgroundColorEnd: cardColor,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text(
+                                  'Achievements',
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 250,
                     )
                   ],
                 ),
@@ -296,7 +400,7 @@ class _DBProfileState extends State<DBProfile> {
             alignment: Alignment.topCenter,
             child: Padding(
               padding: const EdgeInsets.only(
-                top: 150.0,
+                top: 60.0,
               ),
               child: Container(
                 width: circleRadius,
