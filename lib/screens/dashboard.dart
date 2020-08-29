@@ -67,27 +67,32 @@ class _DashPageState extends State<DashPage> {
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 15.0,
-                ),
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  decoration:
-                      ShapeDecoration(shape: CircleBorder(), color: cardColor),
-                  child: Padding(
-                    padding: EdgeInsets.all(3),
-                    child: DecoratedBox(
-                      decoration: ShapeDecoration(
-                        shape: CircleBorder(),
-                      ),
-                      child: Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.white,
-                        size: 25,
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 15.0,
+                  ),
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    decoration: ShapeDecoration(
+                        shape: CircleBorder(), color: cardColor),
+                    child: Padding(
+                      padding: EdgeInsets.all(3),
+                      child: DecoratedBox(
+                        decoration: ShapeDecoration(
+                          shape: CircleBorder(),
+                        ),
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                          size: 25,
+                        ),
                       ),
                     ),
                   ),
