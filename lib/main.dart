@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:testimonial_app/screens/dbprofile.dart';
 import 'package:testimonial_app/screens/login.dart';
 import 'package:testimonial_app/screens/splash.dart';
 
@@ -25,6 +26,7 @@ class _MainAppState extends State<MainApp> {
       routes: {
         'splash': (context) => SplashScreen(),
         'login': (context) => LoginApp(),
+        'dbProfile': (context) => DBProfile(),
       },
     );
   }

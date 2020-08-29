@@ -56,7 +56,12 @@ class _LogUserState extends State<LogUser> {
                 padding: const EdgeInsets.all(8.0),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Text('Enter your mobile number'),
+                  child: Text(
+                    'Enter your mobile number',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               )),
               Center(
@@ -110,7 +115,9 @@ class _LogUserState extends State<LogUser> {
               ),
               Center(
                 child: CupertinoButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'dbProfile');
+                    },
                     color: Color(0xFF0D5EA3),
                     child: Text("GET OTP")),
               ),
