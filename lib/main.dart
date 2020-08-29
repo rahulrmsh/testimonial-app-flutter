@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:testimonial_app/screens/login.dart';
 import 'package:testimonial_app/screens/splash.dart';
 
 void main() {
@@ -20,9 +21,10 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'splash',
+      initialRoute: 'login',
       routes: {
         'splash': (context) => SplashScreen(),
+        'login': (context) => LoginApp(),
       },
     );
   }

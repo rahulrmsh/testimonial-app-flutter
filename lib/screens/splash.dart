@@ -40,6 +40,22 @@ class _SplashScreenState extends State<SplashScreen> {
                   Expanded(
                       flex: 1,
                       child: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Center(
+                          child: Text(
+                            "Digital Base",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 50,
+                              fontFamily: 'JosefinSans-Semi',
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      )),
+                  Expanded(
+                      flex: 1,
+                      child: Padding(
                         padding: EdgeInsets.only(bottom: 20),
                         child: Center(
                           child: Text(
