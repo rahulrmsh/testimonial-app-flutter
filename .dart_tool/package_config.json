@@ -50,6 +50,12 @@
       "languageVersion": "2.3"
     },
     {
+      "name": "configurable_expansion_tile",
+      "rootUri": "file:///home/creator/Documents/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/configurable_expansion_tile-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "convert",
       "rootUri": "file:///home/creator/Documents/Programs/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1",
       "packageUri": "lib/",
@@ -206,7 +212,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-08-29T05:55:25.592533Z",
+  "generated": "2020-08-29T11:40:09.605600Z",
   "generator": "pub",
   "generatorVersion": "2.9.1"
 }
